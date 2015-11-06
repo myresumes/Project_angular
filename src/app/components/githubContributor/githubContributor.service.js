@@ -7,7 +7,7 @@
 
   /** @ngInject */
   function githubContributor($log, $http) {
-    var apiHost = 'https://api.github.com/repos/Swiip/generator-gulp-angular';
+    var apiHost = 'https://github.com/prateekpronoc/Project_angular/commits/develop';
 
     var service = {
       apiHost: apiHost,
@@ -21,7 +21,7 @@
         limit = 30;
       }
 
-      return $http.get(apiHost + '/contributors?per_page=' + limit)
+      return $http.get(apiHost)
         .then(getContributorsComplete)
         .catch(getContributorsFailed);
 

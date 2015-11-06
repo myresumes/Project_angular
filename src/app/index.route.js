@@ -1,21 +1,42 @@
 (function() {
-  'use strict';
+    'use strict';
 
-  angular
-    .module('projectAngular')
-    .config(routeConfig);
+    angular
+        .module('projectAngular')
+        .config(routeConfig);
 
-  /** @ngInject */
-  function routeConfig($stateProvider, $urlRouterProvider) {
-    $stateProvider
-      .state('home', {
-        url: '/',
-        templateUrl: 'app/main/main.html',
-        controller: 'MainController',
-        controllerAs: 'main'
-      });
+    /** @ngInject */
+    function routeConfig($stateProvider, $urlRouterProvider) {
+        $stateProvider
+            .state('home', {
+                url: '/home',
+                views: {
+                    'header@': {
+                        templateUrl: 'app/header/header.tpl.html'
+                    },
+                    '@': {
+                        templateUrl: 'app/content/content.html'
+                    }
+                },
+                data: {
+                    private: true
+                }
+            });
 
-    $urlRouterProvider.otherwise('/');
-  }
+
+        // $stateProvider
+        //     .state('home', {
+        //         abstract: true,
+        //         url: '/home/',
+        //         view: {
+        //             'header': {
+
+        //             }
+        //         }
+
+        //     });
+
+        $urlRouterProvider.otherwise('/home');
+    }
 
 })();
