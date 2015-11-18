@@ -56,17 +56,17 @@
       activate();
 
       function activate() {
-        return getContributors().then(function() {
-          $log.info('Activated Contributors View');
-        });
+        // return getContributors().then(function() {
+        //   $log.info('Activated Contributors View');
+        // });
       }
 
       function getContributors() {
-        return githubContributor.getContributors(10).then(function(data) {
-          vm.contributors = data;
+        // return githubContributor.getContributors(10).then(function(data) {
+        //   vm.contributors = data;
 
-          return vm.contributors;
-        });
+        //   return vm.contributors;
+        // });
       }
     }
 

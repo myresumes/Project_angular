@@ -7,7 +7,7 @@
 
   /** @ngInject */
   function githubContributor($log, $http) {
-    var apiHost = 'https://github.com/prateekpronoc/Project_angular/commits/develop';
+    var apiHost = '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=';
 
     var service = {
       apiHost: apiHost,

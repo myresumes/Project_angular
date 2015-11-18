@@ -15,7 +15,8 @@
                         templateUrl: 'app/header/header.tpl.html'
                     },
                     '@': {
-                        templateUrl: 'app/content/content.html'
+                        templateUrl: 'app/content/content.html',
+                        controller: 'MainContentCtrl as vm'
                     }
                 },
                 data: {
